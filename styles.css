@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7E1D7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+
+    main {
+        flex: 1;
+    }
+}
+
+header {
+    width: 100%;
+    background-color: #DEDBD2;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    .task-output {
+        flex: 1;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #DEDBD2;
+    color: #2d3536;
+}
+
+h1 {
+    color: #4A5759;
+    padding: 0;
+    margin: 1%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.task-input {
+    margin: 1% 0%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#title-add,
+#title-list {
+    color: #2d3536;
+    font-weight: 500;
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+#taskInput {
+    width: 400px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #EDAFB8;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    padding: 10px;
+    background-color: #4A5759;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addTaskBtn:hover {
+    background-color: #B0C4B1;
+}
+
+.task-output {
+    background-color: #EDAFB8;
+    margin: 5px 120px 10px 120px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#title-list {
+    background-color: #f3b5be;
+    border-radius: 10px 10px 0 0;
+    padding: 1% 0%;
+}
+
+#taskList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    list-style-type: none;
+    padding: 10px;
+    color: #2d3536;
+}
+
+#taskList li {
+    background-color: #DEDBD2;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+#taskList li span {
+    flex-grow: 1;
+    text-align:start;
+    font-size: 16px;
+    color: #2d3536;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+#taskList li button {
+    background-color: #4A5759;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+#taskList li button:hover {
+    background-color: #B0C4B1;
+}
+
+#linktree {
+    color: #2d3536;
+}
+
+/* Estilos para pantalla móvil */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #title-add,
+    #title-list {
+        font-size: medium;
+    }
+
+    #taskInput {
+        width: 250px;
+        padding: 10px;
+        margin: 5px;
+        border: 2px solid #EDAFB8;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .task-output {
+        background-color: #EDAFB8;
+        margin: 5px 15px 10px 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    #taskList {
+        display: block;
+    }
+
+    #taskList li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
